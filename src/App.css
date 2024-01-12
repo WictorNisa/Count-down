@@ -61,7 +61,6 @@
   align-items: center;
   justify-content: flex-end;
   align-items: center;
-  
 }
 
 .socials-inner-wrapper {
@@ -76,4 +75,20 @@
 
 .social-icon {
   width: 20%;
+}
+
+.social-icon:hover {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(16%) saturate(3664%)
+    hue-rotate(302deg) brightness(93%) contrast(91%);
+}
+
+@media (min-width: 768px) {
+  .count-down-outer {
+    width: 70%;
+    /* Add any additional styles for desktop view */
+  }
+
+  .socials-inner-wrapper {
+    width: 10%;
+  }
 }
