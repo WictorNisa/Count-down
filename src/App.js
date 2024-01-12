@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CountDown from "./components/CountDown";
+import FacebookIcon from "./images/icon-facebook.svg";
+import PinterestIcon from "./images/icon-pinterest.svg";
+import InstagramkIcon from "./images/icon-instagram.svg";
 
 function App() {
+  const targetDate = new Date("2024-01-19T23:59:59");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="hero">
+        <div className="pattern-overlay">
+          <CountDown targetDate={targetDate} />
+
+          <div className="pattern-hills-box">
+            <div className="socials-wrapper">
+              <div className="socials-inner-wrapper">
+                <img src={FacebookIcon} alt="" className="social-icon" />
+                <img src={PinterestIcon} alt="" className="social-icon" />
+                <img src={InstagramkIcon} alt="" className="social-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
